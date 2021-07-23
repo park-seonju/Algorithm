@@ -1,0 +1,5 @@
+a=input().split('/')
+print('protocol:',a[0][:4])
+print('host:',a[2])
+print('others:',a[3])
+# re.split('://|/',a)
