@@ -15,6 +15,7 @@ while q:
     next_d = direction
     flag = False
     if board[x][y] == 0:
+        ans+=1
         board[x][y] = count
     for _ in range(4):
         next_d = (next_d-1) % 4
@@ -32,7 +33,5 @@ while q:
 
         if board[bx][by] != 1:
             q.append((bx, by, direction, count))
-
-    ans = count -1
 
 print(ans)
