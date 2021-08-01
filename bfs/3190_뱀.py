@@ -40,13 +40,12 @@ while 1:
         board[i][j]=3
         q.append((i,j))
         ans+=1
-    if len(direction)>idx:
-        if direction[idx][0]==str(ans):
-            if direction[idx][1]=='L':
-                way=(way-1)%4
-            elif direction[idx][1]=='D':
-                way=(way+1)%4
-            idx+=1
+    if direction[idx][0]==str(ans):
+        if direction[idx][1]=='L':
+            way=(way-1)%4
+        elif direction[idx][1]=='D':
+            way=(way+1)%4
+        idx+=1
 print(ans)
 # (0 1 0 0 1)/(0 2 0 0 2)/(0 1 0 0 1)
 
